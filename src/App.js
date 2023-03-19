@@ -38,10 +38,10 @@ function App() {
   return (
     <div style={{display:"flex", flexDirection: 'column', gap: 20, margin: 20}}>
       <PatienceNumberInput label="Patience number field"  onChange={handlePacienceInputValue} value={pacienceInputValue}/>
-      <ScreamingTextInput label="Screaming text input" onChange={handlesetScreamingTextChange} value={screamingText}/>
-      <CapitalizationRouletteInput label="Random capitalize input" onChange={handlerandomCapitalizedTextChange} value={randomCapitalizedText}/>
+      <ScreamingTextInput maxlength={10} label="Screaming text input" onChange={handlesetScreamingTextChange} value={screamingText}/>
+      <CapitalizationRouletteInput maxlength={10} label="Random capitalize input" onChange={handlerandomCapitalizedTextChange} value={randomCapitalizedText}/>
       <ChaChaSlider label="Cha Cha slider" min={0} max={100} step={1} value={sliderValue} onChange={handleSliderChange} />
-      <NotSoHiddenPassword label="Not so hidden password" onChange={handleNotSoHiddenPassword} value={notSoHiddenPasswordRealValue}/>
+      <NotSoHiddenPassword maxlength={10} label="Not so hidden password" onChange={handleNotSoHiddenPassword} value={notSoHiddenPasswordRealValue}/>
     </div>
   );
 }

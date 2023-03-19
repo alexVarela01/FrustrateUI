@@ -21,6 +21,7 @@ const NotSoHiddenPassword = ({ label, className, maxlength, value, onChange }) =
 
   const handleChange = (e) => {
     const input = e.target.value.toLowerCase();
+
     let emojiText = "";
     for (let i = 0; i < input.length; i++) {
       const char = input.charAt(i);
@@ -28,6 +29,11 @@ const NotSoHiddenPassword = ({ label, className, maxlength, value, onChange }) =
     }
 
     let realVal = removeEmojis(input);
+
+    if((value+realVal).length > maxlength){
+      return;
+    }
+
     setEmojiValue(emojiText);
     onChange(value+realVal)
   };
