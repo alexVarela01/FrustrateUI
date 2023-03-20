@@ -9,6 +9,7 @@ import NoMistakesAlowedInput from './components/NoMistakesAlowedInput.tsx'
 import NoMistakesAlowedTextArea from './components/NoMistakesAlowedTextArea.tsx'
 import DrawkcabInput from './components/DrawkcabInput.tsx'
 import CantClickThisButton from './components/CantClickThisButton.tsx'
+import AnyButtonButton from './components/AnyButtonButton.tsx'
 
 function App() {
 
@@ -57,6 +58,10 @@ function App() {
     console.log("CantTouchThis clicked!")
   };
 
+  const handleAnyButtonButton = () => {
+    console.log("AnyButtonButton clicked!")
+  };
+
   return (
     <div style={{display:"flex", flexDirection: 'column', gap: 20, margin: 20}}>
       <PatienceNumberInput label="Patience number field"  onChange={handlePacienceInputValue} value={pacienceInputValue}/>
@@ -68,6 +73,7 @@ function App() {
       <NoMistakesAlowedTextArea maxlength={100} label="No Mistakes alowed" onChange={handleNoMistakesAlowedTextArea} value={noMistakesAlowedTextareaValue}/>
       <DrawkcabInput maxlength={20} label="Drawkcab text input" onChange={handleBackwardsInput} value={backwardsInputValue}/>
       <CantClickThisButton speed="2" label="Can't Click This" onClick={handleHoverButtonClick}/>
+      <AnyButtonButton speed="2" clicksNeeded={10} label="Any Button Button" onClick={handleAnyButtonButton}/>
     </div>
   );
 }

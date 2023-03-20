@@ -30,7 +30,7 @@ const CantTouchThisButton = ({ id, label, className, onClick, speed = 1 }) => {
   }
 
   return (
-    <div className={className}>
+    <div className={"button-cont " + className}>
       <button id={id} className="button" style={{ transition: `0.1s`, top: `${position.top}px`, left: `${position.left}px` }} ref={buttonRef} onMouseEnter={handleHover} onClick={handleClick}>{label}</button>
     </div>
   );
