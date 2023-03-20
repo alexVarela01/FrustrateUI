@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import './css/CapitalizationRouletteInput.css'; // import the CSS file
 
 const ScreamingTextInput = ({ label, className, maxlength, value, onChange, chance = 0.2 }) => {

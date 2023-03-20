@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import './css/PatienceNumberInput.css'; // import the CSS file
 
 const PatienceNumberInput = ({ label, className, maxlength,value, onChange, gap = 1}) => {
