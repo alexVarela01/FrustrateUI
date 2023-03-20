@@ -1,7 +1,7 @@
 import React from 'react';
 import './css/CapitalizationRouletteInput.css'; // import the CSS file
 
-const ScreamingTextInput = ({ label, className, maxlength, value, onChange, chance = 0.2 }) => {
+const ScreamingTextInput = ({ id, label, className, maxlength, value, onChange, chance = 0.2 }) => {
 
   const handleChange: React.ChangeEventHandler<HTMLInputElement> = (e) => {
     const inputVal = e.currentTarget.value;
@@ -27,7 +27,7 @@ const ScreamingTextInput = ({ label, className, maxlength, value, onChange, chan
     <div className={className}>
       <label className="random-label">{label}</label>
       <div className="random-input">
-        <input className="random-input__display" value={value} onChange={handleChange}/>
+        <input id={id} className="random-input__display" value={value} onChange={handleChange}/>
       </div>
     </div>
   );

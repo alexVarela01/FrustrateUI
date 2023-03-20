@@ -1,7 +1,7 @@
 import React from 'react';
 import './css/NoMistakesAlowedInput.css'; // import the CSS file
 
-const NoMistakesAlowedInput = ({ label, className, maxlength, value, onChange }) => {
+const NoMistakesAlowedInput = ({ id, label, className, maxlength, value, onChange }) => {
 
   const handleChange = (e) => {
     const input = e.target.value;
@@ -54,7 +54,7 @@ const NoMistakesAlowedInput = ({ label, className, maxlength, value, onChange })
     <div className={className}>
       <label className="no-mistake-label">{label}</label>
       <div className="no-mistake-input">
-        <input onKeyDown={handleKeyDown} className="no-mistake-input__display" onClick={handleClick} type="text" value={value}  onChange={handleChange}/>
+        <input id={id} onKeyDown={handleKeyDown} className="no-mistake-input__display" onClick={handleClick} type="text" value={value}  onChange={handleChange}/>
         <button className="no-mistake-button" onClick={handleClear}>X</button>
       </div>
     </div>

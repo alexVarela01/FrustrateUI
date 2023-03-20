@@ -1,7 +1,7 @@
 import React from 'react';
 import './css/NoMistakesAlowedTextArea.css'; // import the CSS file
 
-const NoMistakesAlowedTextArea = ({ label, className, maxlength, value, onChange, rows, cols }) => {
+const NoMistakesAlowedTextArea = ({ id, label, className, maxlength, value, onChange, rows, cols }) => {
 
   const handleChange = (e) => {
     const input = e.target.value;
@@ -54,7 +54,7 @@ const NoMistakesAlowedTextArea = ({ label, className, maxlength, value, onChange
     <div className={className}>
       <label className="no-mistake-ta-label">{label}</label>
       <div className="no-mistake-ta-input">
-        <textarea rows={rows} cols={cols} onKeyDown={handleKeyDown} className="no-mistake-ta-input__display" onClick={handleClick} value={value}  onChange={handleChange}/>
+        <textarea id={id} rows={rows} cols={cols} onKeyDown={handleKeyDown} className="no-mistake-ta-input__display" onClick={handleClick} value={value}  onChange={handleChange}/>
         <button className="no-mistake-ta-button" onClick={handleClear}>X</button>
       </div>
     </div>
