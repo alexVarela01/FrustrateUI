@@ -1,5 +1,6 @@
 import React from 'react';
-import './css/NoMistakesAlowedTextArea.css'; // import the CSS file
+import './css/NoMistakesAlowedInput.css'; 
+import './css/General.css'; 
 
 const NoMistakesAlowedTextArea = ({ id, label, className, maxlength, value, onChange, rows, cols }) => {
 
@@ -64,10 +65,10 @@ const NoMistakesAlowedTextArea = ({ id, label, className, maxlength, value, onCh
 
   return (
     <div className={className}>
-      <label className="no-mistake-ta-label">{label}</label>
-      <div className="no-mistake-ta-input">
-        <textarea onContextMenu={disableRightClick} id={id} rows={rows} cols={cols} onKeyDown={handleKeyDown} className="no-mistake-ta-input__display" onClick={handleClick} value={value}  onChange={handleChange}/>
-        <button className="no-mistake-ta-button" onClick={handleClear}>X</button>
+      <label className="labels">{label}</label>
+      <div className="input">
+        <textarea onContextMenu={disableRightClick} id={id} rows={rows} cols={cols} onKeyDown={handleKeyDown} className="input_display" onClick={handleClick} value={value}  onChange={handleChange}/>
+        <button className="no-mistake-button-ta" style={{top:0,right:0,position:'absolute'}} onClick={handleClear}>X</button>
       </div>
     </div>
   );

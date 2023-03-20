@@ -1,5 +1,6 @@
 import React from 'react';
-import './css/NoMistakesAlowedInput.css'; // import the CSS file
+import './css/NoMistakesAlowedInput.css'; 
+import './css/General.css'; 
 
 const NoMistakesAlowedInput = ({ id, label, className, maxlength, value, onChange }) => {
 
@@ -64,9 +65,9 @@ const NoMistakesAlowedInput = ({ id, label, className, maxlength, value, onChang
 
   return (
     <div className={className}>
-      <label className="no-mistake-label">{label}</label>
-      <div className="no-mistake-input">
-        <input id={id} onContextMenu={disableRightClick} onKeyDown={handleKeyDown} className="no-mistake-input__display" onClick={handleClick} type="text" value={value}  onChange={handleChange}/>
+      <label className="labels">{label}</label>
+      <div className="input">
+        <input id={id} onContextMenu={disableRightClick} onKeyDown={handleKeyDown} className="input_display" onClick={handleClick} type="text" value={value}  onChange={handleChange}/>
         <button className="no-mistake-button" onClick={handleClear}>X</button>
       </div>
     </div>

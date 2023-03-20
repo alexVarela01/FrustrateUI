@@ -1,5 +1,6 @@
 import React from 'react';
-import './css/PatienceNumberInput.css'; // import the CSS file
+import './css/PatienceNumberInput.css'; 
+import './css/General.css'; 
 
 const PatienceNumberInput = ({ id, label, className, maxlength,value, onChange, gap = 1}) => {
 
@@ -15,10 +16,10 @@ const PatienceNumberInput = ({ id, label, className, maxlength,value, onChange, 
 
   return (
     <div className={className}>
-      <label className="pacience-label">{label}</label>
-      <div className="pacience-input">
+      <label className="labels">{label}</label>
+      <div className="input">
         <button className="pacience-input__button" onClick={() => handleAddDigit(- gap)}>-</button>
-        <input id={id} disabled className="pacience-input__display" value={value}/>
+        <input id={id} disabled className="input_display pacience-input__display" value={value}/>
         <button className="pacience-input__button" onClick={() => handleAddDigit(gap)}>+</button>
       </div>
     </div>

@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import './css/ChaChaSlider.css'; // import the CSS file
+import './css/ChaChaSlider.css'; 
+import './css/General.css'; 
 
 function ChaChaSlider({ id, label, min, max, step, value, className, onChange }) {
   const [sliderValue, setSliderValue] = useState(max - (value - min));
@@ -28,7 +29,7 @@ function ChaChaSlider({ id, label, min, max, step, value, className, onChange })
 
   return (
     <div className={className}>
-      <label className="slide-label">{label}</label>
+      <label className="labels">{label}</label>
       <input
         type="range"
         id={id}

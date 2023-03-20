@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-import './css/NotSoHiddenPassword.css'; // import the CSS file
+import './css/NotSoHiddenPassword.css'; 
+import './css/General.css'; 
 
 const NotSoHiddenPassword = ({ id, label, className, maxlength, value, onChange }) => {
   const [emojiValue, setEmojiValue] = useState("");
@@ -95,9 +96,9 @@ const NotSoHiddenPassword = ({ id, label, className, maxlength, value, onChange 
   
   return (
     <div className={className}>
-      <label className="imojipasswd-label">{label}</label>
-      <div className="imojipasswd-input">
-        <input id={id} onContextMenu={disableRightClick} onKeyDown={handleKeyDown} className="imojipasswd-input__display" type="text" onClick={handleClick} value={emojiValue} data-realVal={value} onChange={handleChange} />
+      <label className="labels">{label}</label>
+      <div className="input">
+        <input id={id} onContextMenu={disableRightClick} onKeyDown={handleKeyDown} className="input_display" type="text" onClick={handleClick} value={emojiValue} data-realVal={value} onChange={handleChange} />
         <button className="imojipasswd-button" onClick={handleClear}>X</button>
       </div>
     </div>

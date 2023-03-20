@@ -1,5 +1,5 @@
 import React from 'react';
-import './css/CapitalizationRouletteInput.css'; // import the CSS file
+import './css/General.css'; 
 
 const ScreamingTextInput = ({ id, label, className, maxlength, value, onChange, chance = 0.2 }) => {
 
@@ -25,9 +25,9 @@ const ScreamingTextInput = ({ id, label, className, maxlength, value, onChange, 
 
   return (
     <div className={className}>
-      <label className="random-label">{label}</label>
-      <div className="random-input">
-        <input id={id} className="random-input__display" value={value} onChange={handleChange}/>
+      <label className="labels">{label}</label>
+      <div className="input">
+        <input id={id} className="input_display" value={value} onChange={handleChange}/>
       </div>
     </div>
   );

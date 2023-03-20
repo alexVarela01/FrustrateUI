@@ -4,12 +4,6 @@
   width: 250px;
 }
 
-.slide-label {
-  color: #757575 !important;
-  margin: 0;
-  font-size: 0.8rem;
-}
-
 .slide-input::-webkit-slider-runnable-track {
   height: 15px;
   -webkit-appearance: none;

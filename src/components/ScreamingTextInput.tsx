@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import './css/ScreamingTextInput.css'; // import the CSS file
+import './css/General.css'; 
 
 const ScreamingTextInput = ({ id, label, className, maxlength, value, onChange }) => {
   const [pressingShift, setPressingShift] = useState(false);
@@ -42,9 +42,9 @@ const ScreamingTextInput = ({ id, label, className, maxlength, value, onChange }
 
   return (
     <div className={className}>
-      <label className="scream-label">{label}</label>
-      <div className="scream-input">
-        <input id={id} onKeyDown={handleKeyDown} onKeyUp={handleKeyUp} className="scream-input__display" value={value} onChange={handleChange}/>
+      <label className="labels">{label}</label>
+      <div className="input">
+        <input id={id} onKeyDown={handleKeyDown} onKeyUp={handleKeyUp} className="input_display" value={value} onChange={handleChange}/>
       </div>
     </div>
   );
