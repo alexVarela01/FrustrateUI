@@ -8,8 +8,9 @@ import NotSoHiddenPassword from './components/NotSoHiddenPassword.tsx'
 import NoMistakesAlowedInput from './components/NoMistakesAlowedInput.tsx'
 import NoMistakesAlowedTextArea from './components/NoMistakesAlowedTextArea.tsx'
 import DrawkcabInput from './components/DrawkcabInput.tsx'
-import CantClickThisButton from './components/CantClickThisButton.tsx'
+import CantTouchThisButton from './components/CantTouchThisButton.tsx'
 import AnyButtonButton from './components/AnyButtonButton.tsx'
+import WaitForItButton from './components/WaitForItButton.tsx'
 
 function App() {
 
@@ -62,6 +63,10 @@ function App() {
     console.log("AnyButtonButton clicked!")
   };
 
+  const handleWaitForItButton = () => {
+    console.log("WaitForItButton clicked!")
+  };
+
   return (
     <div style={{display:"flex", flexDirection: 'column', gap: 20, margin: 20}}>
       <PatienceNumberInput label="Patience number field"  onChange={handlePacienceInputValue} value={pacienceInputValue}/>
@@ -72,8 +77,9 @@ function App() {
       <NoMistakesAlowedInput maxlength={10} label="No Mistakes alowed" onChange={handleNoMistakesAlowedInput} value={noMistakesAlowedValue}/>
       <NoMistakesAlowedTextArea maxlength={100} label="No Mistakes alowed" onChange={handleNoMistakesAlowedTextArea} value={noMistakesAlowedTextareaValue}/>
       <DrawkcabInput maxlength={20} label="Drawkcab text input" onChange={handleBackwardsInput} value={backwardsInputValue}/>
-      <CantClickThisButton speed="2" label="Can't Click This" onClick={handleHoverButtonClick}/>
+      <CantTouchThisButton speed="2" label="Can't Click This" onClick={handleHoverButtonClick}/>
       <AnyButtonButton speed="2" clicksNeeded={10} label="Any Button Button" onClick={handleAnyButtonButton}/>
+      <WaitForItButton speed="2" clicksNeeded={10} label="Any Button Button" onClick={handleWaitForItButton}/>
     </div>
   );
 }

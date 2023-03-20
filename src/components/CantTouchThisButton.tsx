@@ -10,7 +10,7 @@ const CantTouchThisButton = ({ id, label, className, onClick, speed = 1 }) => {
     const { top, left } = buttonRef.current!.getBoundingClientRect();
     setInitialPosition({ top, left });
     setPosition({ top, left, speed });
-  }, [buttonRef]);
+  }, [buttonRef, speed]);
 
   function handleHover(event) {
     var left = Math.floor(getRandomInt(0, window.innerWidth - event.target.offsetWidth));
