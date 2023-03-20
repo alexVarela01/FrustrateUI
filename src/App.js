@@ -79,7 +79,7 @@ function App() {
       <DrawkcabInput maxlength={20} label="Drawkcab text input" onChange={handleBackwardsInput} value={backwardsInputValue}/>
       <CantTouchThisButton speed="2" label="Can't Click This" onClick={handleHoverButtonClick}/>
       <AnyButtonButton clicksNeeded={10} label="Any Button Button" onClick={handleAnyButtonButton}/>
-      <WaitForItButton timeNeeded={10} label="Any Button Button" onClick={handleWaitForItButton}/>
+      <WaitForItButton timeNeeded={10} label="Wait Button" onClick={handleWaitForItButton}/>
     </div>
   );
 }
