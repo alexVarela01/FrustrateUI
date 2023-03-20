@@ -30,6 +30,14 @@ const NoMistakesAlowedInput = ({ id, label, className, maxlength, value, onChang
     if (event.type === "mousemove") {
       event.preventDefault();
     }
+    // Disable ctrl+v
+    if (event.keyCode === 86 && event.ctrlKey) {
+      event.preventDefault();
+    }
+    // Disable ctrl+z
+    if (event.keyCode === 90 && event.ctrlKey) {
+      event.preventDefault();
+    }
     // Disable ctrl+a select
     if (event.keyCode === 65 && event.ctrlKey) {
       event.preventDefault();
@@ -50,11 +58,15 @@ const NoMistakesAlowedInput = ({ id, label, className, maxlength, value, onChang
     onChange("")
   };
 
+  const disableRightClick = (event) => {
+    event.preventDefault();
+  }
+
   return (
     <div className={className}>
       <label className="no-mistake-label">{label}</label>
       <div className="no-mistake-input">
-        <input id={id} onKeyDown={handleKeyDown} className="no-mistake-input__display" onClick={handleClick} type="text" value={value}  onChange={handleChange}/>
+        <input id={id} onContextMenu={disableRightClick} onKeyDown={handleKeyDown} className="no-mistake-input__display" onClick={handleClick} type="text" value={value}  onChange={handleChange}/>
         <button className="no-mistake-button" onClick={handleClear}>X</button>
       </div>
     </div>

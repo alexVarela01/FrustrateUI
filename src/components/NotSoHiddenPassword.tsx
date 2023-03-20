@@ -58,6 +58,14 @@ const NotSoHiddenPassword = ({ id, label, className, maxlength, value, onChange 
     if (event.keyCode === 65 && event.ctrlKey) {
       event.preventDefault();
     }
+    // Disable ctrl+v
+    if (event.keyCode === 86 && event.ctrlKey) {
+      event.preventDefault();
+    }
+    // Disable ctrl+z
+    if (event.keyCode === 90 && event.ctrlKey) {
+      event.preventDefault();
+    }
     // Disable replace
     if (event.target.selectionStart !== event.target.selectionEnd) {
       event.preventDefault();
@@ -80,12 +88,16 @@ const NotSoHiddenPassword = ({ id, label, className, maxlength, value, onChange 
   
     return string.replace(regex, '');
   }
+
+  const disableRightClick = (event) => {
+    event.preventDefault();
+  }
   
   return (
     <div className={className}>
       <label className="imojipasswd-label">{label}</label>
       <div className="imojipasswd-input">
-        <input id={id} onKeyDown={handleKeyDown} className="imojipasswd-input__display" type="text" onClick={handleClick} value={emojiValue} data-realVal={value} onChange={handleChange} />
+        <input id={id} onContextMenu={disableRightClick} onKeyDown={handleKeyDown} className="imojipasswd-input__display" type="text" onClick={handleClick} value={emojiValue} data-realVal={value} onChange={handleChange} />
         <button className="imojipasswd-button" onClick={handleClear}>X</button>
       </div>
     </div>

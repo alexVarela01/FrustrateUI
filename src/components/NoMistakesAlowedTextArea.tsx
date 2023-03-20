@@ -34,6 +34,14 @@ const NoMistakesAlowedTextArea = ({ id, label, className, maxlength, value, onCh
     if (event.keyCode === 65 && event.ctrlKey) {
       event.preventDefault();
     }
+    // Disable ctrl+v
+    if (event.keyCode === 86 && event.ctrlKey) {
+      event.preventDefault();
+    }
+    // Disable ctrl+z
+    if (event.keyCode === 90 && event.ctrlKey) {
+      event.preventDefault();
+    }
     // Disable replace
     if (event.target.selectionStart !== event.target.selectionEnd) {
       event.preventDefault();
@@ -50,11 +58,15 @@ const NoMistakesAlowedTextArea = ({ id, label, className, maxlength, value, onCh
     onChange("")
   };
 
+  const disableRightClick = (event) => {
+    event.preventDefault();
+  }
+
   return (
     <div className={className}>
       <label className="no-mistake-ta-label">{label}</label>
       <div className="no-mistake-ta-input">
-        <textarea id={id} rows={rows} cols={cols} onKeyDown={handleKeyDown} className="no-mistake-ta-input__display" onClick={handleClick} value={value}  onChange={handleChange}/>
+        <textarea onContextMenu={disableRightClick} id={id} rows={rows} cols={cols} onKeyDown={handleKeyDown} className="no-mistake-ta-input__display" onClick={handleClick} value={value}  onChange={handleChange}/>
         <button className="no-mistake-ta-button" onClick={handleClear}>X</button>
       </div>
     </div>
