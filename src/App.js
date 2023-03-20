@@ -8,6 +8,7 @@ import NotSoHiddenPassword from './components/NotSoHiddenPassword.tsx'
 import NoMistakesAlowedInput from './components/NoMistakesAlowedInput.tsx'
 import NoMistakesAlowedTextArea from './components/NoMistakesAlowedTextArea.tsx'
 import DrawkcabInput from './components/DrawkcabInput.tsx'
+import CantClickThisButton from './components/CantClickThisButton.tsx'
 
 function App() {
 
@@ -52,6 +53,10 @@ function App() {
     setBackwardsInputValue(realValue)
   };
 
+  const handleHoverButtonClick = () => {
+    console.log("CantTouchThis clicked!")
+  };
+
   return (
     <div style={{display:"flex", flexDirection: 'column', gap: 20, margin: 20}}>
       <PatienceNumberInput label="Patience number field"  onChange={handlePacienceInputValue} value={pacienceInputValue}/>
@@ -62,6 +67,7 @@ function App() {
       <NoMistakesAlowedInput maxlength={10} label="No Mistakes alowed" onChange={handleNoMistakesAlowedInput} value={noMistakesAlowedValue}/>
       <NoMistakesAlowedTextArea maxlength={100} label="No Mistakes alowed" onChange={handleNoMistakesAlowedTextArea} value={noMistakesAlowedTextareaValue}/>
       <DrawkcabInput maxlength={20} label="Drawkcab text input" onChange={handleBackwardsInput} value={backwardsInputValue}/>
+      <CantClickThisButton speed="2" label="Can't Click This" onClick={handleHoverButtonClick}/>
     </div>
   );
 }

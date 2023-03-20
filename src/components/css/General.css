@@ -1,7 +1,10 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,500&display=swap');
+
 .labels {
   color: #757575 !important;
   margin: 0;
-  font-size: 0.8rem;
+  font-size: 0.75rem;
+  font-family: 'Roboto';
 }
 
 .input_display {
@@ -24,4 +27,24 @@
   border: 1px  solid #dee2e6 !important;
   width: 250px;
   position: relative;
+  font-family: 'Roboto';
+}
+
+.button {
+  align-items: center;
+  border-radius: 6px;
+  border: none;
+  width: 250px;
+  height: 35px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  color: #fff;
+  background-color: #904cd3;
+  text-align: center;
+  font-family: 'Roboto';
+  transition: 1;
+}
+
+.button:hover{
+  filter: brightness(0.9);
 }
