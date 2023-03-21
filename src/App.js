@@ -11,6 +11,7 @@ import DrawkcabInput from './components/DrawkcabInput.tsx'
 import CantTouchThisButton from './components/CantTouchThisButton.tsx'
 import AnyButtonButton from './components/AnyButtonButton.tsx'
 import WaitForItButton from './components/WaitForItButton.tsx'
+import PleaseHoldMeeeeeButton from './components/PleaseHoldMeeeeeButton.tsx'
 
 function App() {
 
@@ -22,6 +23,7 @@ function App() {
   const [noMistakesAlowedValue, setNoMistakesAlowedValue] = useState("");
   const [noMistakesAlowedTextareaValue, setNoMistakesAlowedTextareaValue] = useState("");
   const [backwardsInputValue, setBackwardsInputValue] = useState("");
+  const [fileMeUpValue, setFileMeUpValue] = useState("");
   
   const handlePacienceInputValue = (newValue) => {
     setPacienceInputValue(newValue);
@@ -39,20 +41,20 @@ function App() {
     setRandomCapitalizedText(newValue);
   };
 
-  const handleNotSoHiddenPassword = (realValue) => {
-    setNotSoHiddenPasswordRealValue(realValue)
+  const handleNotSoHiddenPassword = (newValue) => {
+    setNotSoHiddenPasswordRealValue(newValue)
   };
 
-  const handleNoMistakesAlowedInput = (realValue) => {
-    setNoMistakesAlowedValue(realValue)
+  const handleNoMistakesAlowedInput = (newValue) => {
+    setNoMistakesAlowedValue(newValue)
   };
 
-  const handleNoMistakesAlowedTextArea = (realValue) => {
-    setNoMistakesAlowedTextareaValue(realValue)
+  const handleNoMistakesAlowedTextArea = (newValue) => {
+    setNoMistakesAlowedTextareaValue(newValue)
   };
 
-  const handleBackwardsInput = (realValue) => {
-    setBackwardsInputValue(realValue)
+  const handleBackwardsInput = (newValue) => {
+    setBackwardsInputValue(newValue)
   };
 
   const handleHoverButtonClick = () => {
@@ -65,6 +67,10 @@ function App() {
 
   const handleWaitForItButton = () => {
     console.log("WaitForItButton clicked!")
+  };
+
+  const handlePleaseHoldMeeeeeButton = () => {
+    console.log("PleaseHoldMeeeeeButton clicked!")
   };
 
   return (
@@ -80,6 +86,7 @@ function App() {
       <CantTouchThisButton speed="2" label="Can't Click This" onClick={handleHoverButtonClick}/>
       <AnyButtonButton clicksNeeded={10} label="Any Button Button" onClick={handleAnyButtonButton}/>
       <WaitForItButton timeNeeded={10} label="Wait Button" onClick={handleWaitForItButton}/>
+      <PleaseHoldMeeeeeButton time={5} label="Hold button" onClick={handlePleaseHoldMeeeeeButton}/>
     </div>
   );
 }
