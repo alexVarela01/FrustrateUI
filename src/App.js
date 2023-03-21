@@ -81,7 +81,7 @@ function App() {
       <ChaChaSlider label="Cha Cha slider" min={0} max={100} step={1} value={sliderValue} onChange={handleSliderChange} />
       <NotSoHiddenPassword maxlength={10} label="Not so hidden password" onChange={handleNotSoHiddenPassword} value={notSoHiddenPasswordRealValue}/>
       <NoMistakesAlowedInput maxlength={10} label="No Mistakes alowed" onChange={handleNoMistakesAlowedInput} value={noMistakesAlowedValue}/>
-      <NoMistakesAlowedTextArea maxlength={100} label="No Mistakes alowed" onChange={handleNoMistakesAlowedTextArea} value={noMistakesAlowedTextareaValue}/>
+      <NoMistakesAlowedTextArea maxlength={100} label="No Mistakes alowed textarea" onChange={handleNoMistakesAlowedTextArea} value={noMistakesAlowedTextareaValue}/>
       <DrawkcabInput maxlength={20} label="Drawkcab text input" onChange={handleBackwardsInput} value={backwardsInputValue}/>
       <CantTouchThisButton speed="2" label="Can't Click This" onClick={handleHoverButtonClick}/>
       <AnyButtonButton clicksNeeded={10} label="Any Button Button" onClick={handleAnyButtonButton}/>

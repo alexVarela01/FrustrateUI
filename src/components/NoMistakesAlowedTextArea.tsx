@@ -24,7 +24,15 @@ const NoMistakesAlowedTextArea = ({ id, label, className, maxlength, value, onCh
       event.preventDefault();
     }
     // Disable left and right arrow keys
-    if (event.keyCode === 37 || event.keyCode === 39) {
+    if (event.keyCode === 37 || event.keyCode === 38 || event.keyCode === 39 || event.keyCode === 40) {
+      event.preventDefault();
+    }
+    // Disable pageup and page down
+    if (event.keyCode === 33 || event.keyCode === 34) {
+      event.preventDefault();
+    }
+    // Disable home and end
+    if (event.keyCode === 36 || event.keyCode === 35) {
       event.preventDefault();
     }
     // Disable mouse cursor movement
