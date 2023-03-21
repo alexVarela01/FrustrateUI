@@ -5,8 +5,8 @@ const PleaseHoldMeeeeeButton = ({ id, label, className, onClick, time = 5 }) => 
   const [isHolding, setIsHolding] = useState(false);
   const [isEnabled, setIsEnabled] = useState(false);
   const [timeLeft, setTimeLeft] = useState(time);
-  const holdTime = useRef<NodeJS.Timeout | null>(null);
-  const divRef = useRef<HTMLDivElement>(null);
+  const holdTime = useRef(null);
+  const divRef = useRef(null);
 
   const handleMouseDown = () => {
     setIsHolding(true);
@@ -14,7 +14,7 @@ const PleaseHoldMeeeeeButton = ({ id, label, className, onClick, time = 5 }) => 
   };
 
   const handleMouseUp = () => {
-    clearTimeout(holdTime.current!);
+    clearTimeout(holdTime.current);
     setIsHolding(false);
     setIsEnabled(false);
     setTimeLeft(time);
@@ -31,19 +31,19 @@ const PleaseHoldMeeeeeButton = ({ id, label, className, onClick, time = 5 }) => 
   }
 
   useEffect(() => {
-    let intervalId: NodeJS.Timeout | undefined;
+    let intervalId;
     if (isHolding) {
       intervalId = setInterval(() => {
         setTimeLeft((prevTimeLeft) => {
           if (prevTimeLeft === 1) {
             setIsEnabled(true);
-            clearInterval(intervalId!);
+            clearInterval(intervalId);
           }
           return prevTimeLeft - 1;
         });
       }, 1000);
     }
-    return () => clearInterval(intervalId!);
+    return () => clearInterval(intervalId);
   }, [isHolding, timeLeft]);
 
   return (

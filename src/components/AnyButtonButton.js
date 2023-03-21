@@ -3,7 +3,7 @@ import './css/General.css';
 
 const CantTouchThisButton = ({ id, label, className, onClick, clicksNeeded = 5 }) => {
   const [currentClick, setCurrentClick] = useState(clicksNeeded);
-  const buttonRef = useRef<HTMLButtonElement>(null);
+  const buttonRef = useRef(null);
 
   function handleClick(){
     setCurrentClick(currentClick - 1)

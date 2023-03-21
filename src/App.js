@@ -1,17 +1,17 @@
 import React, { useState } from 'react';
 
-import PatienceNumberInput from './components/PatienceNumberInput.tsx'
-import ScreamingTextInput from './components/ScreamingTextInput.tsx'
-import CapitalizationRouletteInput from './components/CapitalizationRouletteInput.tsx'
-import ChaChaSlider from './components/ChaChaSlider.tsx'
-import NotSoHiddenPassword from './components/NotSoHiddenPassword.tsx'
-import NoMistakesAlowedInput from './components/NoMistakesAlowedInput.tsx'
-import NoMistakesAlowedTextArea from './components/NoMistakesAlowedTextArea.tsx'
-import DrawkcabInput from './components/DrawkcabInput.tsx'
-import CantTouchThisButton from './components/CantTouchThisButton.tsx'
-import AnyButtonButton from './components/AnyButtonButton.tsx'
-import WaitForItButton from './components/WaitForItButton.tsx'
-import PleaseHoldMeeeeeButton from './components/PleaseHoldMeeeeeButton.tsx'
+import PatienceNumberInput from './components/PatienceNumberInput.js'
+import ScreamingTextInput from './components/ScreamingTextInput.js'
+import CapitalizationRouletteInput from './components/CapitalizationRouletteInput.js'
+import ChaChaSlider from './components/ChaChaSlider.js'
+import NotSoHiddenPassword from './components/NotSoHiddenPassword.js'
+import NoMistakesAlowedInput from './components/NoMistakesAlowedInput.js'
+import NoMistakesAlowedTextArea from './components/NoMistakesAlowedTextArea.js'
+import DrawkcabInput from './components/DrawkcabInput.js'
+import CantTouchThisButton from './components/CantTouchThisButton.js'
+import AnyButtonButton from './components/AnyButtonButton.js'
+import WaitForItButton from './components/WaitForItButton.js'
+import PleaseHoldMeeeeeButton from './components/PleaseHoldMeeeeeButton.js'
 
 function App() {
 

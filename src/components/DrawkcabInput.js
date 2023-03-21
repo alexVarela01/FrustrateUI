@@ -3,7 +3,7 @@ import './css/General.css';
 
 const DrawkcabInput = ({ id, label, className, maxlength, value, onChange }) => {
 
-  const handleChange: React.ChangeEventHandler<HTMLInputElement> = (e) => {
+  const handleChange = (e) => {
     const inputVal = e.currentTarget.value;
 
     if(inputVal.length < value.length){
@@ -18,7 +18,7 @@ const DrawkcabInput = ({ id, label, className, maxlength, value, onChange }) => 
     onChange(reversedValue);
   };
 
-  function handleKeyDown(event: React.KeyboardEvent<HTMLInputElement>) {
+  function handleKeyDown(event) {
     if (event.key === "Backspace") {
       onChange(value.substr(1, value.length));
     }

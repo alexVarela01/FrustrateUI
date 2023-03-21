@@ -3,7 +3,7 @@ import './css/General.css';
 
 const ScreamingTextInput = ({ id, label, className, maxlength, value, onChange, chance = 0.2 }) => {
 
-  const handleChange: React.ChangeEventHandler<HTMLInputElement> = (e) => {
+  const handleChange = (e) => {
     const inputVal = e.currentTarget.value;
 
     if(inputVal.length > maxlength){

@@ -4,7 +4,7 @@ import './css/General.css';
 const WaitForItButton = ({ id, label, className, onClick, timeNeeded = 5 }) => {
   const [waitTime, setWaitTime] = useState(timeNeeded);
   const [hasStartedCountdown, setHasStartedCountdown] = useState(false);
-  const buttonRef = useRef<HTMLButtonElement>(null);
+  const buttonRef = useRef(null);
 
   useEffect(() => {
     if(hasStartedCountdown){

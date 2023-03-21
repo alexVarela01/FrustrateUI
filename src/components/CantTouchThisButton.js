@@ -4,10 +4,10 @@ import './css/General.css';
 const CantTouchThisButton = ({ id, label, className, onClick, speed = 1 }) => {
   const [position, setPosition] = useState({ top: 0, left: 0, speed: speed });
   const [initialPosition, setInitialPosition] = useState({ top: 50, left: 50 });
-  const buttonRef = useRef<HTMLButtonElement>(null);
+  const buttonRef = useRef(null);
   
   useEffect(() => {
-    const { top, left } = buttonRef.current!.getBoundingClientRect();
+    const { top, left } = buttonRef.current.getBoundingClientRect();
     setInitialPosition({ top, left });
     setPosition({ top, left, speed });
   }, [buttonRef, speed]);
