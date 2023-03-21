@@ -23,7 +23,6 @@ function App() {
   const [noMistakesAlowedValue, setNoMistakesAlowedValue] = useState("");
   const [noMistakesAlowedTextareaValue, setNoMistakesAlowedTextareaValue] = useState("");
   const [backwardsInputValue, setBackwardsInputValue] = useState("");
-  const [fileMeUpValue, setFileMeUpValue] = useState("");
   
   const handlePacienceInputValue = (newValue) => {
     setPacienceInputValue(newValue);
